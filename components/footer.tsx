@@ -17,13 +17,52 @@ export function Footer() {
         </Reveal>
 
         <Reveal>
-          <a
-            href="mailto:smritinukula16@gmail.com"
-            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-muted-foreground transition-colors hover:border-[#E23150]/35 hover:text-foreground"
-          >
-            <Mail className="size-4 text-primary" />
-            smritinukula16@gmail.com
-          </a>
+          <div className="flex flex-col items-center gap-3">
+            <a
+              href="mailto:smritinukula16@gmail.com"
+              className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-muted-foreground transition-colors hover:border-[#E23150]/35 hover:text-foreground"
+            >
+              <Mail className="size-4 text-primary" />
+              smritinukula16@gmail.com
+            </a>
+            <a
+              href="tel:9113816630"
+              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+              9113816630
+            </a>
+          </div>
+        </Reveal>
+
+        <Reveal>
+          <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-foreground"
+            >
+              Resume
+            </a>
+            <span className="text-white/20">•</span>
+            <a
+              href="https://github.com/smritinukula16"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-foreground"
+            >
+              GitHub
+            </a>
+            <span className="text-white/20">•</span>
+            <a
+              href="https://www.linkedin.com/in/smritinukula"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-foreground"
+            >
+              LinkedIn
+            </a>
+          </div>
         </Reveal>
 
         <Reveal>
