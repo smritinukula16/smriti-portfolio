@@ -55,12 +55,7 @@ export function GameProjects() {
               <div className="group flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-white/10 bg-gradient-to-br from-white/[0.06] via-white/[0.03] to-transparent p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#E23150]/35 hover:shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
                 <div className={`relative mb-6 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br ${project.accent} p-5`}>
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.24),_transparent_60%)]" />
-                  <div className="relative flex h-36 items-center justify-center rounded-[1.1rem] border border-white/10 bg-black/10">
-                    <div className="text-center">
-                      <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-white/70">Image Placeholder</p>
-                      <p className="mt-2 text-sm font-semibold text-white">{project.subtitle}</p>
-                    </div>
-                  </div>
+                  <div className="relative flex h-36 items-center justify-center rounded-[1.1rem] border border-white/10 bg-black/10" />
                 </div>
 
                 <div className="flex flex-1 flex-col">

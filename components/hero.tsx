@@ -199,6 +199,8 @@ export function Hero() {
             </a>
             <a
               href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               download
               className="inline-flex items-center gap-2 rounded-full border border-[#E23150]/30 bg-[#E23150]/10 px-5 py-2.5 text-sm font-medium text-[#ffb0bd] backdrop-blur-sm transition-colors hover:border-[#E23150]/50 hover:bg-[#E23150]/15 sm:px-6 sm:py-3"
             >
