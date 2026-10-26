@@ -205,3 +205,41 @@
     color: transparent;
   }
 }
+
+
+/* Keep the certifications page aligned with the portfolio's burgundy and cherry-red palette,
+   even when the browser or operating system prefers a different dark theme. */
+.certifications-theme {
+  color-scheme: dark;
+  --background: #140a0f;
+  --foreground: #f4e9ec;
+  --card: #1e1015;
+  --card-foreground: #f4e9ec;
+  --popover: #1a0d12;
+  --popover-foreground: #f4e9ec;
+  --primary: #e23150;
+  --primary-foreground: #fff5f7;
+  --secondary: #2a151b;
+  --secondary-foreground: #f4e9ec;
+  --muted: #241318;
+  --muted-foreground: #b09399;
+  --accent: #e23150;
+  --accent-foreground: #fff5f7;
+  --destructive: #e23150;
+  --border: rgba(226, 49, 80, 0.14);
+  --input: rgba(255, 255, 255, 0.08);
+  --ring: #e23150;
+  --chart-1: #e23150;
+  --chart-2: #ff6b81;
+  --chart-3: #a8223a;
+  --chart-4: #f4a4b0;
+  --chart-5: #6e1424;
+  --sidebar: #1a0d12;
+  --sidebar-foreground: #f4e9ec;
+  --sidebar-primary: #e23150;
+  --sidebar-primary-foreground: #fff5f7;
+  --sidebar-accent: #2a151b;
+  --sidebar-accent-foreground: #f4e9ec;
+  --sidebar-border: rgba(226, 49, 80, 0.14);
+  --sidebar-ring: #e23150;
+}
