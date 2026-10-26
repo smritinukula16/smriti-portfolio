@@ -15,7 +15,7 @@ const credlyProfileUrl = 'https://www.credly.com/users/smriti-n'
 
 export default function CertificationsPage() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="certifications-theme min-h-screen bg-background text-foreground">
       <Navbar />
 
       <section className="relative overflow-hidden px-6 pb-16 pt-36 md:pb-24 md:pt-44">
