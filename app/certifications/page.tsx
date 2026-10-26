@@ -3,16 +3,12 @@ import { ArrowDownRight, ArrowUpRight, Award, BadgeCheck, ExternalLink } from 'l
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 
-const credentials = [
-  {
-    title: 'Unity Certified Associate: Game Developer',
-    issuer: 'Unity',
-    category: 'Game Development',
-    description:
-      'Professional certification validating foundational skills in Unity game development.',
-    featured: true,
-    verifyUrl: '',
-  },
+const credlyBadges = [
+  'https://www.credly.com/badges/f81eb56a-0cc6-4dc2-9d47-c249dddc05c0/public_url',
+  'https://www.credly.com/badges/461f7192-841c-465e-afdc-e4a6a159898e/public_url',
+  'https://www.credly.com/badges/bdfa7621-9df4-49a2-99c1-edc44ff13020/public_url',
+  'https://www.credly.com/badges/de2ca5eb-c5fb-404b-8edd-c78117c1eeef/public_url',
+  'https://www.credly.com/badges/3cec6a43-d6e5-427b-9349-c04d10e07c41/public_url',
 ]
 
 const credlyProfileUrl = 'https://www.credly.com/users/smriti-n'
@@ -67,44 +63,52 @@ export default function CertificationsPage() {
               <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">The collection</p>
               <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">Credentials & badges</h2>
             </div>
-            <p className="text-sm text-muted-foreground">More milestones will be added over time.</p>
+            <p className="text-sm text-muted-foreground">{credlyBadges.length} public badge links · More milestones to come</p>
           </div>
 
           <div className="grid gap-5 md:grid-cols-2">
-            {credentials.map((credential) => (
-              <article key={credential.title} className="group relative overflow-hidden rounded-2xl border border-border bg-card/50 p-6 transition-colors hover:border-primary/50 md:p-8">
+            <article className="group relative overflow-hidden rounded-2xl border border-primary/40 bg-card/50 p-6 transition-colors hover:border-primary md:p-8">
+              <div className="absolute right-0 top-0 h-32 w-32 rounded-full bg-primary/5 blur-2xl transition-colors group-hover:bg-primary/10" />
+              <div className="relative flex items-start justify-between gap-4">
+                <div className="rounded-xl border border-primary/20 bg-primary/10 p-3 text-primary">
+                  <BadgeCheck className="size-7" />
+                </div>
+                <span className="rounded-full border border-primary/20 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-primary">
+                  Featured
+                </span>
+              </div>
+              <p className="relative mt-8 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">Game Development</p>
+              <h3 className="relative mt-2 text-xl font-semibold leading-snug">Unity Certified Associate: Game Developer</h3>
+              <p className="relative mt-2 text-sm text-muted-foreground">Issued by Unity</p>
+              <p className="relative mt-4 text-sm leading-6 text-muted-foreground">
+                Professional certification validating foundational skills in Unity game development.
+              </p>
+              <a href={credlyProfileUrl} target="_blank" rel="noreferrer" className="relative mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
+                View public Credly profile <ExternalLink className="size-4" />
+              </a>
+            </article>
+
+            {credlyBadges.map((badgeUrl, index) => (
+              <article key={badgeUrl} className="group relative overflow-hidden rounded-2xl border border-border bg-card/50 p-6 transition-colors hover:border-primary/50 md:p-8">
                 <div className="absolute right-0 top-0 h-32 w-32 rounded-full bg-primary/5 blur-2xl transition-colors group-hover:bg-primary/10" />
                 <div className="relative flex items-start justify-between gap-4">
                   <div className="rounded-xl border border-primary/20 bg-primary/10 p-3 text-primary">
                     <BadgeCheck className="size-7" />
                   </div>
-                  <span className="rounded-full border border-primary/20 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-primary">
-                    Featured
+                  <span className="rounded-full border border-border px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
+                    Credly
                   </span>
                 </div>
-                <p className="relative mt-8 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">{credential.category}</p>
-                <h3 className="relative mt-2 text-xl font-semibold leading-snug">{credential.title}</h3>
-                <p className="relative mt-2 text-sm text-muted-foreground">Issued by {credential.issuer}</p>
-                <p className="relative mt-4 text-sm leading-6 text-muted-foreground">{credential.description}</p>
-                <a href={credlyProfileUrl} target="_blank" rel="noreferrer" className="relative mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
-                  View public Credly profile <ExternalLink className="size-4" />
+                <p className="relative mt-8 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">Digital credential</p>
+                <h3 className="relative mt-2 text-xl font-semibold leading-snug">Credly badge {String(index + 1).padStart(2, '0')}</h3>
+                <p className="relative mt-4 text-sm leading-6 text-muted-foreground">
+                  Open the public badge page to view its credential details and verification information.
+                </p>
+                <a href={badgeUrl} target="_blank" rel="noreferrer" className="relative mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
+                  View badge on Credly <ExternalLink className="size-4" />
                 </a>
               </article>
             ))}
-
-            <article className="flex min-h-64 flex-col justify-between rounded-2xl border border-dashed border-border p-6 md:p-8">
-              <div>
-                <div className="mb-6 inline-flex rounded-xl bg-secondary p-3 text-muted-foreground"><Award className="size-6" /></div>
-                <h3 className="text-xl font-semibold">More credentials coming soon.</h3>
-                <p className="mt-3 max-w-md text-sm leading-6 text-muted-foreground">
-                  Browse the public Credly profile for badges currently shared there. Additional course certificates can be added when their details and verification links are available.
-                </p>
-                <a href={credlyProfileUrl} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
-                  Browse Credly badges <ExternalLink className="size-4" />
-                </a>
-              </div>
-              <p className="mt-8 font-mono text-xs uppercase tracking-wider text-muted-foreground">Always learning · Always building</p>
-            </article>
           </div>
 
           <div className="mt-12 flex flex-col items-start justify-between gap-4 rounded-2xl border border-border bg-secondary/30 p-6 sm:flex-row sm:items-center md:p-8">
