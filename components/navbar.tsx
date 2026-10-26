@@ -5,11 +5,12 @@ import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const links = [
-  { label: 'About', href: '#about' },
-  { label: 'XR Projects', href: '#xr-projects' },
-  { label: 'Web Development', href: '#web-development' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'About', href: '/#about' },
+  { label: 'XR Projects', href: '/#xr-projects' },
+  { label: 'Web Development', href: '/#web-development' },
+  { label: 'Skills', href: '/#skills' },
+  { label: 'Certifications', href: '/certifications' },
+  { label: 'Contact', href: '/#contact' },
 ]
 
 export function Navbar() {
@@ -31,11 +32,11 @@ export function Navbar() {
       )}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6">
-        <a href="#top" className="font-mono text-sm font-semibold tracking-tight text-foreground">
+        <a href="/#top" className="font-mono text-sm font-semibold tracking-tight text-foreground">
           smriti<span className="text-primary">.n</span>
         </a>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-6 lg:flex">
           {links.map((link) => (
             <li key={link.href}>
               <a href={link.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
@@ -46,7 +47,7 @@ export function Navbar() {
         </ul>
 
         <a
-          href="#contact"
+          href="/#contact"
           className="hidden rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition-transform hover:scale-105 md:inline-flex"
         >
           Let&apos;s connect
@@ -55,15 +56,16 @@ export function Navbar() {
         <button
           type="button"
           aria-label={open ? 'Close menu' : 'Open menu'}
+          aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="text-foreground md:hidden"
+          className="text-foreground lg:hidden"
         >
           {open ? <X className="size-6" /> : <Menu className="size-6" />}
         </button>
       </nav>
 
       {open ? (
-        <div className="glass mt-3 border-t border-border md:hidden">
+        <div className="glass mt-3 border-t border-border lg:hidden">
           <ul className="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-4">
             {links.map((link) => (
               <li key={link.href}>
