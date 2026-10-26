@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowDownRight, ArrowUpRight, Award, BadgeCheck, ExternalLink, ShieldCheck } from 'lucide-react'
+import { ArrowDownRight, ArrowUpRight, Award, BadgeCheck, ExternalLink } from 'lucide-react'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 
@@ -15,7 +15,7 @@ const credentials = [
   },
 ]
 
-const categories = ['All credentials', 'Game Development', 'AR / VR / XR', 'Web Development', 'Other']
+const credlyProfileUrl = 'https://www.credly.com/users/smriti-n'
 
 export default function CertificationsPage() {
   return (
@@ -52,9 +52,9 @@ export default function CertificationsPage() {
               <p className="text-sm leading-6 text-muted-foreground">
                 Game Developer · Unity
               </p>
-              <p className="mt-4 text-xs text-muted-foreground">
-                Verification links and additional credentials will be added as they are provided.
-              </p>
+              <a href={credlyProfileUrl} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
+                View Credly profile <ExternalLink className="size-4" />
+              </a>
             </div>
           </div>
         </div>
@@ -86,25 +86,22 @@ export default function CertificationsPage() {
                 <h3 className="relative mt-2 text-xl font-semibold leading-snug">{credential.title}</h3>
                 <p className="relative mt-2 text-sm text-muted-foreground">Issued by {credential.issuer}</p>
                 <p className="relative mt-4 text-sm leading-6 text-muted-foreground">{credential.description}</p>
-                {credential.verifyUrl ? (
-                  <a href={credential.verifyUrl} target="_blank" rel="noreferrer" className="relative mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
-                    Verify credential <ExternalLink className="size-4" />
-                  </a>
-                ) : (
-                  <p className="relative mt-6 inline-flex items-center gap-2 text-xs text-muted-foreground">
-                    <ShieldCheck className="size-4" /> Credential verification link to be added
-                  </p>
-                )}
+                <a href={credlyProfileUrl} target="_blank" rel="noreferrer" className="relative mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
+                  View public Credly profile <ExternalLink className="size-4" />
+                </a>
               </article>
             ))}
 
             <article className="flex min-h-64 flex-col justify-between rounded-2xl border border-dashed border-border p-6 md:p-8">
               <div>
                 <div className="mb-6 inline-flex rounded-xl bg-secondary p-3 text-muted-foreground"><Award className="size-6" /></div>
-                <h3 className="text-xl font-semibold">Your next credential goes here.</h3>
+                <h3 className="text-xl font-semibold">More credentials coming soon.</h3>
                 <p className="mt-3 max-w-md text-sm leading-6 text-muted-foreground">
-                  Credly badges, course certificates, and other verified achievements can be added here with their issuer and credential links.
+                  Browse the public Credly profile for badges currently shared there. Additional course certificates can be added when their details and verification links are available.
                 </p>
+                <a href={credlyProfileUrl} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
+                  Browse Credly badges <ExternalLink className="size-4" />
+                </a>
               </div>
               <p className="mt-8 font-mono text-xs uppercase tracking-wider text-muted-foreground">Always learning · Always building</p>
             </article>
