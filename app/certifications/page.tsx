@@ -83,6 +83,33 @@ export default function CertificationsPage() {
               <p className="relative mt-4 text-sm leading-6 text-muted-foreground">
                 Professional certification validating foundational skills in Unity game development.
               </p>
+
+              <div className="relative mt-6 grid grid-cols-3 gap-3">
+                <div className="rounded-xl border border-border bg-background/60 p-3">
+                  <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Score</p>
+                  <p className="mt-1 text-xl font-semibold">651<span className="text-sm text-muted-foreground">/700</span></p>
+                </div>
+                <div className="rounded-xl border border-border bg-background/60 p-3">
+                  <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Passing</p>
+                  <p className="mt-1 text-xl font-semibold">500</p>
+                </div>
+                <div className="rounded-xl border border-border bg-background/60 p-3">
+                  <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Result</p>
+                  <p className="mt-1 text-xl font-semibold text-primary">Pass</p>
+                </div>
+              </div>
+
+              <div className="relative mt-6 rounded-xl border border-border p-4">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <p className="text-sm font-medium">Exam score report</p>
+                  <p className="font-mono text-xs text-muted-foreground">28 Sep 2026</p>
+                </div>
+                <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                  Above expectations in Programming, Physics, User Interface, Editor Interface, Game Design, Game Art,
+                  Lighting, Materials & Effects, Navigation & Pathfinding, Project Management, and more.
+                </p>
+              </div>
+
               <a href={credlyProfileUrl} target="_blank" rel="noreferrer" className="relative mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
                 View public Credly profile <ExternalLink className="size-4" />
               </a>
